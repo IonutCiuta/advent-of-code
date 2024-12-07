@@ -1,11 +1,13 @@
-package com.ionutciuta.puzzles;
+package com.ionutciuta.puzzles._2023;
 
+import com.ionutciuta.puzzles.Puzzle;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.util.ArrayList;
 
 public class Puzzle01 extends Puzzle<Integer> {
+
     @Override
     public Integer solvePart1(String inputFile) {
         final var file = new File(inputFile);

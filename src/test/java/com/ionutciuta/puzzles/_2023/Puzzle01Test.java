@@ -1,17 +1,18 @@
-package com.ionutciuta.puzzles;
+package com.ionutciuta.puzzles._2023;
 
+import com.ionutciuta.puzzles.PuzzleTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Puzzle06Test implements PuzzleTest {
-    private final Puzzle06 puzzle = new Puzzle06();
+class Puzzle01Test implements PuzzleTest {
+    private final Puzzle01 puzzle = new Puzzle01();
 
     @Test
     @Override
     public void shouldReturnExpectedTestResult_part1() {
         final var result = puzzle.solvePart1ForTestInput();
-        assertEquals(288, result);
+        assertEquals(142, result);
     }
 
     @Test
@@ -19,21 +20,21 @@ class Puzzle06Test implements PuzzleTest {
     public void shouldReturnResult_part1() {
         final var result = puzzle.solvePart1();
         System.out.println(result);
-        assertEquals(227850, result);
+        assertEquals(55208, result);
     }
 
     @Test
     @Override
     public void shouldReturnExpectedTestResult_part2() {
-        final var result = puzzle.solvePart2ForTestInput();
-        assertEquals(71503, result);
+        final var result = puzzle.solvePart1ForTestInput();
+        assertEquals(281, result);
     }
 
     @Test
     @Override
     public void shouldReturnResult_part2() {
-        final var result = puzzle.solvePart2();
+        final var result = puzzle.solvePart1();
         System.out.println(result);
-        assertEquals(42948149, result);
+        assertEquals(54578, result);
     }
 }

@@ -1,9 +1,9 @@
-package com.ionutciuta.puzzles;
+package com.ionutciuta.puzzles._2023;
 
+import com.ionutciuta.puzzles.Puzzle;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.stream.Collectors;

@@ -1,9 +1,14 @@
-package com.ionutciuta.puzzles;
+package com.ionutciuta.puzzles._2023;
 
+import com.ionutciuta.puzzles.Log;
+import com.ionutciuta.puzzles.Puzzle;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Puzzle06 extends Puzzle<Integer> {
