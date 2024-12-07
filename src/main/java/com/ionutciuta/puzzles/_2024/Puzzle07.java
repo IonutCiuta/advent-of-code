@@ -1,12 +1,11 @@
 package com.ionutciuta.puzzles._2024;
 
-import com.ionutciuta.data.InputList;
+import com.ionutciuta.data.PuzzleData;
 import com.ionutciuta.puzzles.Puzzle;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class Puzzle07 extends Puzzle<Long> {
     record Input(long t, List<Long> n) {}
@@ -20,7 +19,7 @@ public class Puzzle07 extends Puzzle<Long> {
 
     @Override
     public Long solvePart1(String inputFile) {
-        var data = InputList.getFromFile(inputFile, lineParser);
+        var data = PuzzleData.getFromFile(inputFile, lineParser);
         var r = 0L;
         for (var line : data) {
             if (sumOrProd(line.t, line.n, 1, line.n.get(0))) r += line.t;

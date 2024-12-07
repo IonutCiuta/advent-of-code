@@ -1,11 +1,10 @@
 package com.ionutciuta.puzzles._2024;
 
-import com.ionutciuta.data.CharMap;
+import com.ionutciuta.data.PuzzleData;
 import com.ionutciuta.puzzles.Puzzle;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.util.ArrayList;
 
 public class Puzzle06 extends Puzzle<Integer> {
     private static final int[][] dir = new int[][] {
@@ -17,7 +16,7 @@ public class Puzzle06 extends Puzzle<Integer> {
 
     @Override
     public Integer solvePart1(String inputFile) {
-        var map = CharMap.getFromFile(inputFile);
+        var map = PuzzleData.getFromFile(inputFile);
 
         int x = -1, y = -1;
         for (int i = 0; i < map.length; i++) {
