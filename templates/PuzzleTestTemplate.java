@@ -1,5 +1,6 @@
-package com.ionutciuta.puzzles;
+package com.ionutciuta.puzzles._#YEAR#;
 
+import com.ionutciuta.puzzles.PuzzleTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

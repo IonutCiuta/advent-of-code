@@ -1,5 +1,6 @@
-package com.ionutciuta.puzzles;
+package com.ionutciuta.puzzles._#YEAR#;
 
+import com.ionutciuta.puzzles.Puzzle;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
