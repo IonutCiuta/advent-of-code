@@ -17,12 +17,11 @@ public final class PuzzleData {
     }
 
     public static char[][] getFromFile(String fileName) {
-        final var file = new File(fileName);
-        final var lines = FileToLinesParser.getInstance().parseFile(file);
+        var lines = getFromFile(fileName, String::toCharArray);
 
-        final var map = new char[lines.size()][lines.get(0).length()];
+        final var map = new char[lines.size()][lines.get(0).length];
         for (int i = 0; i < lines.size(); i++) {
-            map[i] = lines.get(i).toCharArray();
+            map[i] = lines.get(i);
         }
 
         return map;
