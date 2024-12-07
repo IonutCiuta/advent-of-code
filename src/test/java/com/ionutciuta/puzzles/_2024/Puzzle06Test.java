@@ -20,7 +20,7 @@ class Puzzle06Test implements PuzzleTest {
     public void shouldReturnResult_part1() {
         final var result = puzzle.solvePart1();
         System.out.println(result);
-        assertEquals(0, result);
+        assertEquals(4973, result);
     }
 
     @Test

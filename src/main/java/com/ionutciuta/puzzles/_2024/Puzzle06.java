@@ -1,5 +1,6 @@
 package com.ionutciuta.puzzles._2024;
 
+import com.ionutciuta.data.CharMap;
 import com.ionutciuta.puzzles.Puzzle;
 import org.apache.commons.io.FileUtils;
 
@@ -7,29 +8,20 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Puzzle06 extends Puzzle<Integer> {
+    private static final int[][] dir = new int[][] {
+        new int[] { -1,  0 },
+                new int[] {  0,  1 },
+                new int[] {  1,  0 },
+                new int[] {  0, -1 },
+    };
 
     @Override
     public Integer solvePart1(String inputFile) {
-        final var file = new File(inputFile);
-
-        var lines = new ArrayList<String>();
-
-        try (var it = FileUtils.lineIterator(file)) {
-            while (it.hasNext()) {
-                lines.add(it.nextLine());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        var map = new char[lines.size()][lines.get(0).length()];
-        for (int i = 0; i < lines.size(); i++) {
-            map[i] = lines.get(i).toCharArray();
-        }
+        var map = CharMap.getFromFile(inputFile);
 
         int x = -1, y = -1;
-        for (int i = 0; i < lines.size(); i++) {
-            for (int j = 0; j < lines.get(i).length(); j++) {
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[i].length; j++) {
                 if (map[i][j] == '^') {
                     x = i;
                     y = j;
@@ -41,14 +33,9 @@ public class Puzzle06 extends Puzzle<Integer> {
             }
         }
 
-        var dir = new int[][] {
-                new int[] { -1,  0 },
-                new int[] {  0,  1 },
-                new int[] {  1,  0 },
-                new int[] {  0, -1 },
-        };
         int d = 0;
         int visited = 1 ;
+
         while (true) {
             int xx = x + dir[d][0];
             int yy = y + dir[d][1];
